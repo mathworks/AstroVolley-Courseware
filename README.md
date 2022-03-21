@@ -1,5 +1,5 @@
 # AstroVolley Courseware
-[![View <File Exchange Title> on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/####-file-exchange-title) 
+[![View AstroVolley Courseware on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/108414-astrovolley-courseware)
 
 AstroVolley is free courseware authored by MathWorks&reg; to help teach students the basics of plotting and app building with MATLAB&reg;. During this course students will create their own astrodynamics game where navigators attempt to deliver payloads between star cruisers by volleying them through fantastical gravity fields.
 
