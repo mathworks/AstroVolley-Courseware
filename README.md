@@ -32,7 +32,7 @@ Please see the [AstroVolley Instructor Guide](AstroVolley_InstructorGuide.pdf) f
   * [Pixels to Pictures](https://www.mathworks.com/academia/courseware/pixels-to-pictures.html)
   * [Bytes and Beats](https://www.mathworks.com/academia/courseware/bytes-and-beats.html) 
   * [MATLAB Learn to Code](https://learntocode.mathworks.com/)
-  * [MATLAB Onramp](https://www.mathworks.com/learn/tutorials/matlab-onramp.html)
+  * [MATLAB Onramp](https://matlabacademy.mathworks.com/details/matlab-onramp/gettingstarted)
 
 ## License
 The license for AstroVolley Courseware is available in the [license.txt](license.txt) file in this GitHub repository.
