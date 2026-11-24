@@ -1,0 +1,322 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<MATLABApp schemaVersion='1.0.0' release='R2026b.2' minRelease='R2026b'>
+    <UIFigure name='UIFigure'>
+        <Name>'AstroVolley'</Name>
+        <Position>[50 50 1280 720]</Position>
+        <Children>
+            <GridLayout name='MainGridLayout'>
+                <ColumnWidth>{'1x', '5x', '1x'}</ColumnWidth>
+                <RowHeight>{'fit', '1x'}</RowHeight>
+                <Children>
+                    <UIAxes name='UIAxes'>
+                        <Box>'on'</Box>
+                        <Color>[0 0 0]</Color>
+                        <GridColor>[1 1 1]</GridColor>
+                        <Layout>
+                            <Column>2</Column>
+                            <Row>2</Row>
+                        </Layout>
+                        <Toolbar>
+                            <Visible>'off'</Visible>
+                        </Toolbar>
+                        <XLim>[-300 300]</XLim>
+                        <XTick>[-300 -250 -200 -150 -100 -50 0 50 100 150 200 250 300]</XTick>
+                        <XTickLabel>''</XTickLabel>
+                        <YLim>[-200 200]</YLim>
+                        <YTick>[-200 -150 -100 -50 0 50 100 150 200]</YTick>
+                        <YTickLabel>''</YTickLabel>
+                    </UIAxes>
+                    <GridLayout name='SideGridLayout2'>
+                        <Layout>
+                            <Column>3</Column>
+                            <Row>2</Row>
+                        </Layout>
+                        <RowHeight>{'1x', 'fit', 'fit'}</RowHeight>
+                        <Children>
+                            <Label name='AngleLabel2'>
+                                <FontName>'Consolas'</FontName>
+                                <HorizontalAlignment>'center'</HorizontalAlignment>
+                                <Layout>
+                                    <Column>1</Column>
+                                    <Row>2</Row>
+                                </Layout>
+                                <Text>{'Angle'; '(deg)'}</Text>
+                            </Label>
+                            <Label name='VelocityLabel2'>
+                                <FontName>'Consolas'</FontName>
+                                <HorizontalAlignment>'center'</HorizontalAlignment>
+                                <Layout>
+                                    <Column>2</Column>
+                                    <Row>2</Row>
+                                </Layout>
+                                <Text>{'Velocity'; '(%)'}</Text>
+                            </Label>
+                            <Slider name='AngleSlider2'>
+                                <Enable>'off'</Enable>
+                                <FontName>'Consolas'</FontName>
+                                <Layout>
+                                    <Column>1</Column>
+                                    <Row>1</Row>
+                                </Layout>
+                                <Limits>[-90 90]</Limits>
+                                <MajorTicks>[-90 -80 -70 -60 -50 -40 -30 -20 -10 0 10 20 30 40 50 60 70 80 90]</MajorTicks>
+                                <Orientation>'vertical'</Orientation>
+                                <ValueChangingFcn>AngleSlider2ValueChanging</ValueChangingFcn>
+                            </Slider>
+                            <Slider name='VelocitySlider2'>
+                                <Enable>'off'</Enable>
+                                <FontName>'Consolas'</FontName>
+                                <Layout>
+                                    <Column>2</Column>
+                                    <Row>1</Row>
+                                </Layout>
+                                <MajorTicks>[0 5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100]</MajorTicks>
+                                <Orientation>'vertical'</Orientation>
+                                <Value>50</Value>
+                                <ValueChangingFcn>VelocitySlider2ValueChanging</ValueChangingFcn>
+                            </Slider>
+                            <Button name='LaunchButton2'>
+                                <BackgroundColor>[0.851 0.3294 0.102]</BackgroundColor>
+                                <ButtonPushedFcn>LaunchButton2Pushed</ButtonPushedFcn>
+                                <Enable>'off'</Enable>
+                                <FontColor>[1 1 1]</FontColor>
+                                <FontName>'Consolas'</FontName>
+                                <FontSize>20</FontSize>
+                                <FontWeight>'bold'</FontWeight>
+                                <Layout>
+                                    <Column>[1 2]</Column>
+                                    <Row>3</Row>
+                                </Layout>
+                                <Text>'LAUNCH'</Text>
+                            </Button>
+                        </Children>
+                    </GridLayout>
+                    <GridLayout name='SideGridLayout1'>
+                        <Layout>
+                            <Column>1</Column>
+                            <Row>2</Row>
+                        </Layout>
+                        <RowHeight>{'1x', 'fit', 'fit'}</RowHeight>
+                        <Children>
+                            <Label name='AngleLabel1'>
+                                <FontName>'Consolas'</FontName>
+                                <HorizontalAlignment>'center'</HorizontalAlignment>
+                                <Layout>
+                                    <Column>1</Column>
+                                    <Row>2</Row>
+                                </Layout>
+                                <Text>{'Angle'; '(deg)'}</Text>
+                            </Label>
+                            <Label name='VelocityLabel1'>
+                                <FontName>'Consolas'</FontName>
+                                <HorizontalAlignment>'center'</HorizontalAlignment>
+                                <Layout>
+                                    <Column>2</Column>
+                                    <Row>2</Row>
+                                </Layout>
+                                <Text>{'Velocity'; '(%)'}</Text>
+                            </Label>
+                            <Slider name='AngleSlider1'>
+                                <Enable>'off'</Enable>
+                                <FontName>'Consolas'</FontName>
+                                <Layout>
+                                    <Column>1</Column>
+                                    <Row>1</Row>
+                                </Layout>
+                                <Limits>[-90 90]</Limits>
+                                <MajorTicks>[-90 -80 -70 -60 -50 -40 -30 -20 -10 0 10 20 30 40 50 60 70 80 90]</MajorTicks>
+                                <Orientation>'vertical'</Orientation>
+                                <ValueChangingFcn>AngleSlider1ValueChanging</ValueChangingFcn>
+                            </Slider>
+                            <Slider name='VelocitySlider1'>
+                                <Enable>'off'</Enable>
+                                <FontName>'Consolas'</FontName>
+                                <Layout>
+                                    <Column>2</Column>
+                                    <Row>1</Row>
+                                </Layout>
+                                <MajorTicks>[0 5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100]</MajorTicks>
+                                <Orientation>'vertical'</Orientation>
+                                <Value>50</Value>
+                                <ValueChangingFcn>VelocitySlider1ValueChanging</ValueChangingFcn>
+                            </Slider>
+                            <Button name='LaunchButton1'>
+                                <BackgroundColor>[0.851 0.3294 0.102]</BackgroundColor>
+                                <ButtonPushedFcn>LaunchButton1Pushed</ButtonPushedFcn>
+                                <Enable>'off'</Enable>
+                                <FontColor>[1 1 1]</FontColor>
+                                <FontName>'Consolas'</FontName>
+                                <FontSize>20</FontSize>
+                                <FontWeight>'bold'</FontWeight>
+                                <Layout>
+                                    <Column>[1 2]</Column>
+                                    <Row>3</Row>
+                                </Layout>
+                                <Text>'LAUNCH'</Text>
+                            </Button>
+                        </Children>
+                    </GridLayout>
+                    <GridLayout name='TopGridLayout'>
+                        <ColumnWidth>{'1x', '3x', '1x', '2x', '1x', '2x', '12x', '2x', '1x', '2x', '1x', '3x', '1x'}</ColumnWidth>
+                        <Layout>
+                            <Column>[1 3]</Column>
+                            <Row>1</Row>
+                        </Layout>
+                        <RowHeight>{'fit', 'fit'}</RowHeight>
+                        <Children>
+                            <StateButton name='SoundButton'>
+                                <Layout>
+                                    <Column>13</Column>
+                                    <Row>1</Row>
+                                </Layout>
+                                <Text>''</Text>
+                                <Tooltip>'Turn On/Off Sound Effects'</Tooltip>
+                                <Value>true</Value>
+                            </StateButton>
+                            <Button name='RandomMissionButton'>
+                                <ButtonPushedFcn>RandomMissionButtonPushed</ButtonPushedFcn>
+                                <Enable>'off'</Enable>
+                                <FontName>'Consolas'</FontName>
+                                <FontSize>18</FontSize>
+                                <Layout>
+                                    <Column>12</Column>
+                                    <Row>[1 2]</Row>
+                                </Layout>
+                                <Text>{'Random'; 'Mission'}</Text>
+                            </Button>
+                            <NumericEditField name='AttemptedField2'>
+                                <Editable>'off'</Editable>
+                                <FontName>'Consolas'</FontName>
+                                <FontSize>18</FontSize>
+                                <HorizontalAlignment>'center'</HorizontalAlignment>
+                                <Layout>
+                                    <Column>10</Column>
+                                    <Row>2</Row>
+                                </Layout>
+                                <Limits>[0 Inf]</Limits>
+                            </NumericEditField>
+                            <Label name='ofLabel2'>
+                                <FontName>'Consolas'</FontName>
+                                <FontSize>18</FontSize>
+                                <HorizontalAlignment>'center'</HorizontalAlignment>
+                                <Layout>
+                                    <Column>9</Column>
+                                    <Row>2</Row>
+                                </Layout>
+                                <Text>'of'</Text>
+                            </Label>
+                            <NumericEditField name='DeliveredField2'>
+                                <Editable>'off'</Editable>
+                                <FontName>'Consolas'</FontName>
+                                <FontSize>18</FontSize>
+                                <HorizontalAlignment>'center'</HorizontalAlignment>
+                                <Layout>
+                                    <Column>8</Column>
+                                    <Row>2</Row>
+                                </Layout>
+                                <Limits>[0 Inf]</Limits>
+                            </NumericEditField>
+                            <EditField name='CallSignField2'>
+                                <FontName>'Consolas'</FontName>
+                                <FontSize>18</FontSize>
+                                <HorizontalAlignment>'center'</HorizontalAlignment>
+                                <Layout>
+                                    <Column>[8 10]</Column>
+                                    <Row>1</Row>
+                                </Layout>
+                                <Value>'Call Sign: Vector'</Value>
+                            </EditField>
+                            <Label name='VolleysLabel'>
+                                <FontName>'Consolas'</FontName>
+                                <FontSize>20</FontSize>
+                                <HorizontalAlignment>'center'</HorizontalAlignment>
+                                <Layout>
+                                    <Column>7</Column>
+                                    <Row>[1 2]</Row>
+                                </Layout>
+                                <Text>{'Payload Volleys'; '(Delivered of Attempted)'}</Text>
+                            </Label>
+                            <NumericEditField name='AttemptedField1'>
+                                <Editable>'off'</Editable>
+                                <FontName>'Consolas'</FontName>
+                                <FontSize>18</FontSize>
+                                <HorizontalAlignment>'center'</HorizontalAlignment>
+                                <Layout>
+                                    <Column>6</Column>
+                                    <Row>2</Row>
+                                </Layout>
+                                <Limits>[0 Inf]</Limits>
+                            </NumericEditField>
+                            <Label name='ofLabel1'>
+                                <FontName>'Consolas'</FontName>
+                                <FontSize>18</FontSize>
+                                <HorizontalAlignment>'center'</HorizontalAlignment>
+                                <Layout>
+                                    <Column>5</Column>
+                                    <Row>2</Row>
+                                </Layout>
+                                <Text>'of'</Text>
+                            </Label>
+                            <NumericEditField name='DeliveredField1'>
+                                <Editable>'off'</Editable>
+                                <FontName>'Consolas'</FontName>
+                                <FontSize>18</FontSize>
+                                <HorizontalAlignment>'center'</HorizontalAlignment>
+                                <Layout>
+                                    <Column>4</Column>
+                                    <Row>2</Row>
+                                </Layout>
+                                <Limits>[0 Inf]</Limits>
+                            </NumericEditField>
+                            <EditField name='CallSignField1'>
+                                <FontName>'Consolas'</FontName>
+                                <FontSize>18</FontSize>
+                                <HorizontalAlignment>'center'</HorizontalAlignment>
+                                <Layout>
+                                    <Column>[4 6]</Column>
+                                    <Row>1</Row>
+                                </Layout>
+                                <Value>'Call Sign: Alpha'</Value>
+                            </EditField>
+                            <Button name='NewCampaignButton'>
+                                <ButtonPushedFcn>NewCampaignButtonPushed</ButtonPushedFcn>
+                                <Enable>'off'</Enable>
+                                <FontName>'Consolas'</FontName>
+                                <FontSize>18</FontSize>
+                                <Layout>
+                                    <Column>2</Column>
+                                    <Row>[1 2]</Row>
+                                </Layout>
+                                <Text>{'New'; 'Campaign'}</Text>
+                            </Button>
+                            <StateButton name='LeaderButton'>
+                                <Enable>'off'</Enable>
+                                <Layout>
+                                    <Column>1</Column>
+                                    <Row>1</Row>
+                                </Layout>
+                                <Text>''</Text>
+                                <Tooltip>'View Campaign Leader Board'</Tooltip>
+                                <ValueChangedFcn>LeaderButtonValueChanged</ValueChangedFcn>
+                            </StateButton>
+                        </Children>
+                    </GridLayout>
+                </Children>
+            </GridLayout>
+        </Children>
+    </UIFigure>
+    <RunConfiguration>
+        <StartupFcn>startupFcn</StartupFcn>
+    </RunConfiguration>
+    <AppDetails>
+        <Author>Paul Huxel</Author>
+        <Name>AstroVolley</Name>
+        <Summary>An astrodynamics game where navigators attempt to deliver payloads between star cruisers by volleying them thru fantastical gravity fields.</Summary>
+        <Version>1.2.0</Version>
+    </AppDetails>
+    <InternalData>
+        <AppId>1603f1b7-5e34-4700-97d7-7a8df408c5c2</AppId>
+    </InternalData>
+    <!-- Thumbnail is used by file previewers. To change how the thumbnail is captured or stored, use the App Details dialog box in App Designer. -->
+    <Thumbnail autoCapture='false'>data:image/jpg;base64,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</Thumbnail>
+</MATLABApp>
