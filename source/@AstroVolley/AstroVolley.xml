@@ -312,7 +312,7 @@
         <Author>Paul Huxel</Author>
         <Name>AstroVolley</Name>
         <Summary>An astrodynamics game where navigators attempt to deliver payloads between star cruisers by volleying them thru fantastical gravity fields.</Summary>
-        <Version>1.2.0</Version>
+        <Version>1.5.0</Version>
     </AppDetails>
     <InternalData>
         <AppId>1603f1b7-5e34-4700-97d7-7a8df408c5c2</AppId>
