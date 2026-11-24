@@ -2,11 +2,16 @@
 
 AstroVolley is free courseware authored by MathWorks&reg; to help teach students the basics of plotting and app building with MATLAB&reg;. During this course students will create their own astrodynamics game where navigators attempt to deliver payloads between star cruisers by volleying them through fantastical gravity fields.
 
-![MyAstroVolleyApp](AstroVolley.png)
+![MyAstroVolleyApp](./source/icons/AstroVolleyApp.png)
 
 ## Course Lesson Plan (~1 hour each)
 
 ### Installing and Playing AstroVolley
+* Navigate to and double-click on `AstroVolley.mltbx`
+  * _Note, the Instructor Guide refers to this file as "AstroVolley.mlappinstall"_
+* You can then launch and play **AstroVolley** from the MATLAB APPS tab
+* From MATLAB, double-click on the `work` folder to access and run the course files
+
 ### Plotting
 * Plotting Ships (Triangles)
 * Plotting Gravitational Bodies (Circles)
@@ -15,6 +20,7 @@ AstroVolley is free courseware authored by MathWorks&reg; to help teach students
   * Creating a Random Mission Map
   * Plotting Velocity Vectors (`quiver`)
   * Animating Trajectories (`comet`)
+
 ### App Building (with App Designer)
 * UIAxes, Properties, and Functions
 * Sliders and Value Changing Callbacks
@@ -25,7 +31,7 @@ AstroVolley is free courseware authored by MathWorks&reg; to help teach students
 Please see the [AstroVolley Instructor Guide](AstroVolley_InstructorGuide.pdf) for more details.
 
 ## Requirements and Recommended Prerequisites 
-* MATLAB R2021b (or later)
+* MATLAB R2026b (or later)
 * Ages: 11+
 * Completing *any* of the following courses...
   * [Pixels to Pictures](https://www.mathworks.com/academia/courseware/pixels-to-pictures.html)
@@ -42,4 +48,4 @@ The license for AstroVolley Courseware is available in the [license.txt](license
 
 [![View AstroVolley Courseware on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/108414-astrovolley-courseware)
 
-_Copyright 2022 The MathWorks, Inc._
+_Copyright 2022-2026 The MathWorks, Inc._
