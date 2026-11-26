@@ -7,9 +7,13 @@ app.UIFigure.Icon     = fullfile( iconPath, "AstroVolleyIcon.png" );
 app.LeaderButton.Icon = fullfile( iconPath, "favorite.svg" );
 app.SoundButton.Icon  = fullfile( iconPath, "speaker.svg" );
 
-% Resize app for screen size
-app.UIFigure.Units = "normalize";
-app.UIFigure.Position = [0.02, 0.06, 0.96, 0.88];
+% Resize app for screen size (doesn't play well with MATLAB Online)
+try %#ok<TRYNC>
+    if ~matlab.internal.environment.context.isMATLABOnline
+        app.UIFigure.Units = "normalize";
+        app.UIFigure.Position = [0.02, 0.06, 0.96, 0.88];
+    end
+end
 
 % Setup axes
 axis( app.UIAxes, "equal" )
