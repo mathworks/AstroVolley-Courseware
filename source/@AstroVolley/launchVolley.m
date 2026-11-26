@@ -24,7 +24,7 @@ in = inpolygon(traj(:,1),traj(:,2),xa,ya);
 n = size(traj,1);
 n = min(find(in,1,"last")+1,n); % find last point still inside
 
-% Keep two (app.ns) most recent comets, delete oldest
+% Only keep two (app.ns) most recent comets, delete oldest
 h = findobj( app.UIAxes.Children, Tag="tail" );
 if (numel(h) >= app.ns)
     delete( h(end) )
@@ -52,14 +52,18 @@ if (k(end) ~= n)
     k = [k, n];  % ensure last point is plotted
 end
 
-% Set comet color order (head, body, tail) based on active ship
-app.UIAxes.ColorOrder = [app.cs([app.ship app.ship],:); .5 .5 .5];
+% Set comet color order (head, body, tail) based on which ship is launching
+shipColor = app.cs(app.ship,:);
+cometColors = [shipColor; shipColor; 0.5, 0.5, 0.5];
+idx = app.UIAxes.ColorOrderIndex; % comet can mess up ColorOrderIndex
+app.UIAxes.ColorOrder = circshift( cometColors, idx-1, 1 );
 comet( app.UIAxes, traj(k,1), traj(k,2) );
 
-% Lock comet colors after plotting (so unaffected by changes to ColorOrder)
-set( findobj( app.UIAxes.Children, Tag="head" ), ColorMode="manual" );
-set( findobj( app.UIAxes.Children, Tag="body" ), ColorMode="manual" );
-set( findobj( app.UIAxes.Children, Tag="tail" ), ColorMode="manual" );
+% Ensure displayed colors are not affected by future changes to ColorOrder
+h = findobj( app.UIAxes.Children, Tag="head" );
+h(1).Color = shipColor; % most recently plotted
+set( findobj( app.UIAxes.Children, Tag="body" ), Visible="off" );
+set( findobj( app.UIAxes.Children, Tag="tail" ), Color=[0.5, 0.5, 0.5] );
 
 end % function
 
